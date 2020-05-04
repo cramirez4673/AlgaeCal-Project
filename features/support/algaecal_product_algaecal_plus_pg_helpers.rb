@@ -27,10 +27,9 @@ module AlgaeCalPlusPage
 		expected_url = "https://www.algaecal.com/product/algaecal-plus/"
 		Watir::Wait.until {@browser.url == expected_url}
 		if @browser.url == expected_url
-			puts "#{true}: Plus Page URL IS A Match"
+		puts "#{true}: Plus Page URL IS A Match"
 		else
-			expect { raise StandardError, "Plus Page URL NOT A Match: Step FAILED"}.to raise_error('PLEASE VERIFY: Plus Page URL NOT A Match')
+		expect { raise StandardError, "Plus Page URL NOT A Match: Step FAILED"}.to raise_error('PLEASE VERIFY: Plus Page URL NOT A Match')
 		end
 	end
-
 end
