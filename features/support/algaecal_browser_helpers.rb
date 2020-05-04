@@ -19,8 +19,8 @@ module AlgaeCalBrowsers
     Watir.default_timeout = 60
     Watir.logger.ignore(:deprecations)
     #### HEADLESS BROWSER
-    if ENV['app_type'] == 'headless'
-      puts "Running Headless Environment"
+		if ENV['app_type'] == 'headless'
+			puts "Running Headless Environment"
 			$opts = Selenium::WebDriver::Firefox::Options::new(args: ['-headless', '--window-size=1200x1000'])
 			@client = Selenium::WebDriver::Remote::Http::Default.new
 			@client.read_timeout = 120
@@ -90,7 +90,7 @@ module AlgaeCalBrowsers
 		@browser.goto ("#{::EnvironmentHelper.base_url}" + url)
 	end
 
-  def close_browser
-    @browser.close
-  end
+	def close_browser
+	  @browser.close
+	end
 end
